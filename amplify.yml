@@ -1,23 +1,16 @@
 version: 1
-applications:
-  - appRoot: /
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: .output/server
-        files:
-          - "**/*"
-      cache:
-        paths:
-          - node_modules/**/*
-    backend:
-      phases:
-        build:
-          commands:
-            - npm run build
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .output
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
