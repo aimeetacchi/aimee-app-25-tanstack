@@ -1,3 +1,4 @@
+import Posts from "@/components/Posts/Posts.component";
 import { createFileRoute } from "@tanstack/react-router";
 import {
 	Zap,
@@ -63,9 +64,7 @@ function App() {
 						</h1>
 					</div>
 
-					<p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-						Hello World
-					</p>
+					<Posts />
 				</div>
 			</section>
 
